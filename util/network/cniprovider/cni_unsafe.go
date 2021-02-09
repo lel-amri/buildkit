@@ -6,11 +6,11 @@ import (
 	_ "unsafe" // required for go:linkname.
 )
 
-//go:linkname beforeFork runtime.beforefork
+//go:linkname beforeFork syscall.runtime__BeforeFork
 func beforeFork()
 
-//go:linkname afterFork runtime.afterfork
+//go:linkname afterFork syscall.runtime__AfterFork
 func afterFork()
 
-//go:linkname afterForkInChild syscall.runtime_AfterForkInChild
+//go:linkname afterForkInChild syscall.runtime__AfterForkInChild
 func afterForkInChild()
